@@ -1,0 +1,50 @@
+{
+  "name": "shopify-incivus-ui",
+  "version": "1.0.0",
+  "description": "Incivus UI - Modern web application for brand management",
+  "main": "index.js",
+  "scripts": {
+    "start": "PORT=3000 REACT_APP_URL=http://localhost:8002 REACT_APP_API_URL=http://localhost:8000 react-scripts start",
+    "build": "REACT_APP_URL=http://localhost:8002 REACT_APP_API_URL=http://localhost:8000 react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "postbuild": "echo 'Build completed successfully for Firebase App Hosting'"
+  },
+  "dependencies": {
+    "@sentry/react": "^10.2.0",
+    "firebase": "^12.0.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.1",
+    "lucide-react": "^0.263.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "^5.0.1",
+    "serve": "^14.2.4",
+    "styled-components": "^5.3.9"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": ".",
+  "private": true
+}
