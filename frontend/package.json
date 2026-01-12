@@ -4,11 +4,11 @@
   "description": "Incivus UI - Modern web application for brand management",
   "main": "index.js",
   "scripts": {
-    "start": "PORT=3000 REACT_APP_URL=http://localhost:8002 REACT_APP_API_URL=http://localhost:8000 react-scripts start",
-    "build": "REACT_APP_URL=http://localhost:8002 REACT_APP_API_URL=http://localhost:8000 react-scripts build",
+    "start": "cross-env PORT=3000 REACT_APP_URL=http://localhost:8002 REACT_APP_API_URL=http://localhost:8000 react-scripts start",
+    "build": "cross-env REACT_APP_URL=http://localhost:8002 REACT_APP_API_URL=http://localhost:8000 react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "echo 'Build completed successfully for Firebase App Hosting'"
+    "postbuild": "echo Build completed successfully for Firebase App Hosting"
   },
   "dependencies": {
     "@sentry/react": "^10.2.0",
@@ -46,5 +46,8 @@
     ]
   },
   "homepage": ".",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "cross-env": "^10.0.0"
+  }
 }

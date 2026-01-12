@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;  /* Pure white background */
+  color: #1e293b;
+}
+
+/* Hide browser-generated password toggle icons */
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-strong-password-auto-fill-button,
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none !important;
+}
+
+/* Additional browser-specific password icon hiding */
+input[type="password"] {
+  -webkit-text-security: disc;
+}
+
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none !important;
+}
+
+:root {
+  /* 🎨 Balanced Purple Color Scheme - Rich but Not Bright */
+  --primary-purple: #a78bfa;          /* Rich medium purple */
+  --primary-purple-dark: #8b5cf6;     /* Deeper purple for accents */
+  --secondary-purple: #c4b5fd;        /* Medium light purple */
+  --purple-tint: #e0e7ff;             /* Light purple tint */
+  --purple-light: #f3f4f6;            /* Very light purple hint */
+  
+  /* 🌸 Enhanced Card Colors - More Saturated */
+  --card-purple: #d8b4fe;             /* Richer light purple for cards */
+  --card-pink: #f9a8d4;               /* More saturated light pink */
+  --card-lavender: #e9d5ff;           /* Richer light lavender */
+  --card-blue: #bfdbfe;               /* More saturated light blue */
+  --card-green: #bbf7d0;              /* More saturated light green */
+  
+  /* 🎨 Very Light Purple for Specific Components */
+  --very-light-purple: #f8f7ff;       /* Very light purple for component cards */
+  --ultra-light-purple: #faf9ff;      /* Ultra light purple background */
+  
+  /* 🎯 Background & Layout Colors - All White Based */
+  --main-bg: #ffffff;                 /* Pure white main background */
+  --dark-bg: #ffffff;                 /* White instead of dark */
+  --dark-sidebar: #ffffff;            /* White sidebar */
+  --light-gray: #f8fafc;              /* Very light gray */
+  --border-gray: #e2e8f0;             /* Soft border */
+  --text-dark: #1e293b;               /* Dark text */
+  --text-light: #64748b;              /* Light text */
+  --white: #ffffff;                    /* Pure white */
+  
+  /* 🌟 Light Shadows */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  outline: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-purple);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-purple-dark);
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--text-dark);
+  border: 1px solid var(--border-gray);
+}
+
+.btn-secondary:hover {
+  background-color: var(--light-gray);
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-gray);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--light-gray);
+  border-top: 3px solid var(--primary-purple);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
